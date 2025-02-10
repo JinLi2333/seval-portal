@@ -1,0 +1,1 @@
+export { ResultPage as RAIResultPage } from './src/ResultPage'

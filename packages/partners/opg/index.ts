@@ -1,0 +1,1 @@
+export { ResultPage as OPGResultPage } from './src/ResultPage'

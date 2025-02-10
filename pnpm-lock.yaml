@@ -49,6 +49,34 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0
 
+  packages/client:
+    dependencies:
+      '@seval-portal/opg':
+        specifier: workspace:*
+        version: link:../partners/opg
+      '@seval-portal/rai':
+        specifier: workspace:*
+        version: link:../partners/rai
+      '@seval-portal/shared':
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/partners/opg:
+    dependencies:
+      '@seval-portal/shared':
+        specifier: workspace:*
+        version: link:../../shared
+
+  packages/partners/rai:
+    dependencies:
+      '@seval-portal/shared':
+        specifier: workspace:*
+        version: link:../../shared
+
+  packages/server: {}
+
+  packages/shared: {}
+
 packages:
 
   '@ampproject/remapping@2.3.0':

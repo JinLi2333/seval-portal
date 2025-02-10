@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@seval-portal/shared": "workspace:*",
+    "@seval-portal/opg": "workspace:*",
+    "@seval-portal/rai": "workspace:*"
+  }
 }
