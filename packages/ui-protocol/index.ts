@@ -1,0 +1,1 @@
+export { type UIContribution } from "./src/UIContribution";

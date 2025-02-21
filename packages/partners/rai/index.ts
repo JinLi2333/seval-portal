@@ -1,1 +1,1 @@
-export { ResultPage as RAIResultPage } from './src/ResultPage'
+export { Contribution as RAIContribution } from "./src/Contribution";

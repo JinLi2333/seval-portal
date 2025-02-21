@@ -1,10 +1,10 @@
-import { RedButton } from "@seval-portal/shared"
+import { RedButton, Block } from "@seval-portal/shared"
 
 export function ResultPage() {
     return (
-        <div>
+        <Block>
         <h1>OPG Result Page</h1>
-        <RedButton />
-        </div>
+        <RedButton text="OPG Result"/>
+        </Block>
     )
 }

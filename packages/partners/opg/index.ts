@@ -1,1 +1,1 @@
-export { ResultPage as OPGResultPage } from './src/ResultPage'
+export { Contribution as OPGContribution } from "./src/Contribution";
