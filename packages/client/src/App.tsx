@@ -1,8 +1,10 @@
 import { OPGContribution } from "@seval-portal/opg";
 import { RAIContribution } from "@seval-portal/rai";
 import { Divider } from "@seval-portal/shared";
+import { greet } from "@seval-portal/tools"
 
 function App() {
+    greet("client");
     return (
         <div className="App">
             <div>
