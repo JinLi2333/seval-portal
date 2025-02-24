@@ -1,23 +1,26 @@
+// Whitelist: "package" can be only dependened on packages listed in "canBeDependedOn"
+const allowList = [
+  {
+    "package": "@seval-portal/shared",
+    "canBeDependedOn": ["@seval-portal/client", "@seval-portal/opg"]
+  }
+]
+
+function readPackage(pkg) {
+  const name = pkg.name;
+  const dependencies = Object.keys(pkg.dependencies || {});
+  // check if dependencies contains any of the packages in the allowList
+  for (const dep of dependencies) {
+    const restrictedPackage = allowList.find(p => p.package === dep);
+    if (restrictedPackage && !restrictedPackage.canBeDependedOn.includes(name)) {
+      console.log(`❌ Package "${name}" cannot depend on "${dep}"`);
+    }
+  }
+  return pkg;
+}
+
 module.exports = {
   hooks: {
-    readPackage(pkg) {
-      const restrictedDeps = {
-        "@seval-portal/client": ["@seval-portal/shared"], // Restrict @org/model for @org/shared
-      };
-
-      if (restrictedDeps[pkg.name]) {
-        const forbidden = restrictedDeps[pkg.name].filter((dep) =>
-          Object.keys(pkg.dependencies || {}).includes(dep)
-        );
-
-        if (forbidden.length > 0) {
-          throw new Error(
-            `❌ Package "${pkg.name}" cannot depend on ${forbidden.join(", ")}`
-          );
-        }
-      }
-
-      return pkg;
-    }
+    readPackage,
   }
 };

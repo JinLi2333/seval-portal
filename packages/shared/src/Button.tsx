@@ -1,5 +1,4 @@
 import { greet } from '@seval-portal/tools'
-import React from 'react'
 
 export function RedButton({text}: {text: string}) {
     return <button style={{

@@ -29,12 +29,6 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      // 'no-restricted-imports': [
-        // "error",
-        // {
-        //   "patterns": ["../*"]
-        // }
-      // ],
       "import/no-relative-packages": "error"   
     },
   },
